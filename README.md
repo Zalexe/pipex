@@ -5,7 +5,7 @@ pipex is a systems programming project from the 42 curriculum focused on process
 
 The objective is to recreate the behavior of a simple shell pipeline:
 
-< infile cmd1 | cmd2 > outfile
+    < infile cmd1 | cmd2 > outfile
 
 The program must execute two commands in sequence, redirect input and output correctly, and connect them using UNIX pipes.
 
@@ -13,41 +13,41 @@ The program must execute two commands in sequence, redirect input and output cor
 
 The project includes:
 
-Parsing command-line arguments
+·  Parsing command-line arguments
 
-Creating child processes using fork()
+·  Creating child processes using fork()
 
-Executing commands with execve()
+·  Executing commands with execve()
 
-Creating and managing pipes with pipe()
+·  Creating and managing pipes with pipe()
 
-Redirecting input and output using dup2()
+·  Redirecting input and output using dup2()
 
-Resolving executable paths from the PATH environment variable
+·  Resolving executable paths from the PATH environment variable
 
-Handling errors and exit codes properly
+·  Handling errors and exit codes properly
 
-Ensuring clean memory and file descriptor management
+·  Ensuring clean memory and file descriptor management
 
 Implemented in:
 
-C
+·  C
 
-UNIX system calls
+·  UNIX system calls
 
-Project Focus
+## Project Focus
 
 pipex focuses on:
 
-Understanding how shell pipelines work internally
+·  Understanding how shell pipelines work internally
 
-Managing file descriptors across multiple processes
+·  Managing file descriptors across multiple processes
 
-Controlling process lifecycle and synchronization
+·  Controlling process lifecycle and synchronization
 
-Handling environment variables and command resolution
+·  Handling environment variables and command resolution
 
-Structuring logic around low-level system calls
+·  Structuring logic around low-level system calls
 
 ## Technical Scope
 
@@ -55,16 +55,16 @@ The project explores fundamental UNIX mechanisms behind command execution. It in
 
 Particular attention is given to:
 
-Correct ordering of fork, pipe, and dup2 calls
+·  Correct ordering of fork, pipe, and dup2 calls
 
-Preventing file descriptor leaks
+·  Preventing file descriptor leaks
 
-Handling execution failures safely
+·  Handling execution failures safely
 
-Managing multiple processes deterministically
+·  Managing multiple processes deterministically
 
 The emphasis is on understanding how shells coordinate processes and how data flows between them at the system level.
 
 ## Build & Run
-make
-./pipex infile "cmd1" "cmd2" outfile
+    make
+    ./pipex infile "cmd1" "cmd2" outfile
